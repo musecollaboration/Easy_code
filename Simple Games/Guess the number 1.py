@@ -63,4 +63,11 @@ def play_game():
                 f'Не верно {smile()}. Осталось попыток: {max_attempts - attempt - 1}')
 
 
-play_game()
+n = ''
+while n != 'нет':
+    n = input('Вы хотите поиграть? ').lower()
+    if n == 'нет':
+        print(f'Хорошо, буду ждать тебя снова {smile()}')
+        break
+    else:
+        play_game()
